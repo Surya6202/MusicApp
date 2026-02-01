@@ -35,7 +35,7 @@ App_Data/
 *.sqlite
 *.sqlite3
 
-# EF Migrations
+# EF Migrations backups/snapshots
 Migrations/Backup/
 Migrations/*.Designer.cs
 Migrations/*.resx
@@ -61,3 +61,7 @@ _ReSharper*/
 # OS files
 Thumbs.db
 *.DS_Store
+
+*.Migrations/*.cs
+*.Content/*.*
+*.Scripts/*.*
