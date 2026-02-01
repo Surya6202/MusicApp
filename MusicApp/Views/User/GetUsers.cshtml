@@ -1,0 +1,28 @@
+﻿@model IEnumerable<MusicApp.Models.User>
+
+<p>
+    @Html.ActionLink("Create New", "NewUser")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @using MusicApp.Helpers
+            @Html.ActionLink("Edit", "UpdateUser", new { id = UrlEncryptionHelper.EncryptId(item.UserId) }) |
+            @Html.ActionLink("Details", "GetUser", new { id = UrlEncryptionHelper.EncryptId(item.UserId) }) |
+            @Html.ActionLink("Delete", "DeleteUser", new { id = UrlEncryptionHelper.EncryptId(item.UserId) })
+        </td>
+    </tr>
+}
+
+</table>

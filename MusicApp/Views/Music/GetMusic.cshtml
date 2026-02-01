@@ -1,0 +1,37 @@
+﻿@model MusicApp.Models.Music
+
+<div>
+    <h4>Music</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MusicName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MusicName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PublishedYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PublishedYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReleasedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReleasedDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @using MusicApp.Helpers
+    @Html.ActionLink("Edit", "UpdateMusic", new { id = UrlEncryptionHelper.EncryptId(Model.MusicId) }) |
+    @Html.ActionLink("Back to List", "GetMusicDetails")
+</p>

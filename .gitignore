@@ -1,0 +1,63 @@
+# Build results
+bin/
+obj/
+Debug/
+Release/
+
+# Visual Studio / VS Code
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+project.lock.json
+
+# Logs / Temp
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# IIS / ASP.NET
+App_Data/
+
+# Databases
+*.mdf
+*.ldf
+*.dbmdl
+*.sqlite
+*.sqlite3
+
+# EF Migrations
+Migrations/Backup/
+Migrations/*.Designer.cs
+Migrations/*.resx
+*.edmx.diagram
+*.edmx.sql
+*.edmx.*
+
+# Publish output
+publish/
+*.Publish.xml
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# Rider / ReSharper
+_ReSharper*/
+*.DotSettings.user
+.idea/
+
+# OS files
+Thumbs.db
+*.DS_Store

@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm("LoginUser", "User", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Enter your credentials</h4>
+        <hr />
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="userName">Username</label>
+            <div class="col-md-10">
+                <input type="text" name="userName" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="password">Password</label>
+            <div class="col-md-10">
+                <input type="password" name="password" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Login" class="btn btn-primary" />
+                @Html.ActionLink("Cancel", "Index", "Home", htmlAttributes: new { @class="btn btn-default" })
+            </div>
+        </div>
+    </div>
+}
